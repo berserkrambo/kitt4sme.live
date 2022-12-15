@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: k4sme.ai4sdw
-  name: k4sme.ai4sdw
+    app: k4sme-ai4sdw
+  name: k4sme-ai4sdw
 spec:
   ports:
   - name: http
@@ -11,7 +11,7 @@ spec:
     protocol: TCP
     targetPort: 8000
   selector:
-    app: k4sme.ai4sdw
+    app: k4sme-ai4sdw
 
 ---
 
@@ -19,22 +19,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: k4sme.ai4sdw
-  name: k4sme.ai4sdw
+    app: k4sme-ai4sdw
+  name: k4sme-ai4sdw
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k4sme.ai4sdw
+      app: k4sme-ai4sdw
   template:
     metadata:
       labels:
-        app: k4sme.ai4sdw
+        app: k4sme-ai4sdw
     spec:
       containers:
         - image: "ghcr.io/berserkrambo/k4sme.ai4sdw:main"
           imagePullPolicy: IfNotPresent
-          name: k4sme.ai4sdw
+          name: k4sme-ai4sdw
           ports:
           - containerPort: 8000
             name: http
