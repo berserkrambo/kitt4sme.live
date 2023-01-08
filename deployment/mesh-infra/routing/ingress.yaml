@@ -125,7 +125,18 @@ spec:
         host: jsonagent.default.svc.cluster.local
         port:
           number: 7896
-
+  - match:
+      - uri:
+          prefix: /k4sme-ai4sdw-dash/
+      - uri:
+          prefix: /k4sme-ai4sdw-dash
+      rewrite:
+        uri: /
+      route:
+        - destination:
+            host: k4sme-ai4sdw-dash.default.svc.cluster.local
+            port:
+              number: 80
 # NOTE
 # 1. URL rewriting. We use overlapping prefixes to make sure `/x`, `/x/`
 # and `/x/p` get rewritten to `/`, `/` and `/p` respectively. Istio will
