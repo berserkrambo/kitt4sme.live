@@ -30,4 +30,5 @@ spec:
         - "/orion/version"
         - "/quantumleap/version"
         - "/sads/*"
-        - "/vk4sme-ai4sdw-dash/*"
+        - "/k4sme-ai4sdw-dash/*"
+        - "/k4sme-ai4sdw-dash"
