@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - image: "ghcr.io/berserkrambo/k4sme.ai4sdw.dash:main"
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: k4sme-ai4sdw-dash
           ports:
           - containerPort: 8000
