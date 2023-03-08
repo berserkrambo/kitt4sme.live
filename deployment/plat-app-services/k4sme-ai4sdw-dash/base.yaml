@@ -39,7 +39,5 @@ spec:
           - containerPort: 8000
             name: http
           env:
-          - name: "ORION_BASE_URL"
-            value: "http://orion:1026"
           - name: "STREAMLIT_SERVER_BASE_URL_PATH"
             value: "/k4sme-ai4sdw-dash"
