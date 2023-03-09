@@ -7,9 +7,9 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 8000
+    port: 8501
     protocol: TCP
-    targetPort: 8000
+    targetPort: 8501
   selector:
     app: k4sme-ai4sdw-dash
 
@@ -32,11 +32,11 @@ spec:
         app: k4sme-ai4sdw-dash
     spec:
       containers:
-        - image: "ghcr.io/berserkrambo/k4sme.ai4sdw.dash:main"
+        - image: "ghcr.io/c0c0n3/kitt4sme.flaw-sleuth:0.2.0"
           imagePullPolicy: Always
           name: k4sme-ai4sdw-dash
           ports:
-          - containerPort: 8000
+          - containerPort: 8501
             name: http
           env:
           - name: "STREAMLIT_SERVER_BASE_URL_PATH"
