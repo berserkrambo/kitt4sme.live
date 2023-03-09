@@ -31,4 +31,3 @@ spec:
         - "/quantumleap/version"
         - "/sads/*"
         - "/k4sme-ai4sdw-dash/*"
-        - "/k4sme-ai4sdw-dash"
