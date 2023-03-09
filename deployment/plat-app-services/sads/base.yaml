@@ -32,8 +32,8 @@ spec:
         app: sads
     spec:
       containers:
-        - image: "ghcr.io/c0c0n3/kitt4sme.flaw-sleuth:0.2.0"
-          imagePullPolicy: IfNotPresent
+        - image: "ghcr.io/berserkrambo/k4sme.ai4sdw.dash:main"
+          imagePullPolicy: Always
           name: sads
           ports:
           - containerPort: 8501
